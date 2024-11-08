@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <base href="/">
+    <link rel="stylesheet" href="/static/css/styles.css" />
+    <link rel="icon" href="https://storage.googleapis.com/lazy-icons/child-icon.webp" type="image/x-icon">
+    <title>Fun Activities - Screen Time Buddy</title>
+  </head>
+  <body>
+    {% include 'partials/_header.html' %}
+    <div class="main-content">
+      <div class="text-center py-10">
+        <h1 class="text-4xl font-bold mb-8 text-primary">Let's Play and Learn! 🎮</h1>
+        <div class="max-w-2xl mx-auto bg-white rounded-lg shadow-lg p-6">
+          <div id="scenario-card" class="space-y-6">
+            <h2 class="text-2xl font-bold text-primary mb-4">Role Playing Time!</h2>
+            <div class="scenario-content">
+              <img id="scenario-image" src="" alt="Scenario illustration" class="w-64 h-64 mx-auto mb-4 rounded-lg">
+              <h3 id="scenario-title" class="text-xl font-semibold mb-2"></h3>
+              <div class="roles-section space-y-4 mt-4">
+                <div class="parent-role bg-blue-50 p-4 rounded-lg">
+                  <h4 class="font-medium text-blue-700">Parent's Role:</h4>
+                  <p id="parent-instructions" class="text-blue-600"></p>
+                </div>
+                <div class="child-role bg-green-50 p-4 rounded-lg">
+                  <h4 class="font-medium text-green-700">Child's Role:</h4>
+                  <p id="child-instructions" class="text-green-600"></p>
+                </div>
+              </div>
+              <div class="prompts-section mt-6">
+                <h4 class="font-medium mb-2">Helpful Phrases:</h4>
+                <ul id="dialogue-prompts" class="list-disc list-inside space-y-2 text-gray-700">
+                </ul>
+              </div>
+            </div>
+            <button id="next-scenario" class="mt-6 w-full bg-primary hover:bg-primary-dark text-white font-bold py-3 px-4 rounded-lg transition duration-300">
+              Next Scenario 👉
+            </button>
+            <div class="feedback-section mt-8 pt-8 border-t">
+              <h3 class="text-xl font-semibold mb-4">How did it go? 🌟</h3>
+              <div class="emoji-reactions flex justify-center space-x-4">
+                <button class="reaction-btn" data-emoji="😊">
+                  <span class="text-4xl">😊</span>
+                  <span class="block text-sm mt-1">Great!</span>
+                </button>
+                <button class="reaction-btn" data-emoji="😐">
+                  <span class="text-4xl">😐</span>
+                  <span class="block text-sm mt-1">Okay</span>
+                </button>
+                <button class="reaction-btn" data-emoji="😔">
+                  <span class="text-4xl">😔</span>
+                  <span class="block text-sm mt-1">Need Practice</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="/static/js/activities.js"></script>
+  </body>
+</html>
